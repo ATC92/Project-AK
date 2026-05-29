@@ -1,0 +1,11 @@
+{
+	"Configs" : 
+	[
+		"Debug"
+	],
+	"InstallScripts" : 
+	[
+		"/home/alan/Documents/Project_AK/build/_deps/sdl3-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

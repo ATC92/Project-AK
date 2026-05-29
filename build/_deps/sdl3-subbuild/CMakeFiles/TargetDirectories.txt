@@ -1,0 +1,3 @@
+/home/alan/Documents/Project_AK/build/_deps/sdl3-subbuild/CMakeFiles/sdl3-populate.dir
+/home/alan/Documents/Project_AK/build/_deps/sdl3-subbuild/CMakeFiles/edit_cache.dir
+/home/alan/Documents/Project_AK/build/_deps/sdl3-subbuild/CMakeFiles/rebuild_cache.dir

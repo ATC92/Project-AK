@@ -1,0 +1,25 @@
+{
+	"Configs" : 
+	[
+		"Debug"
+	],
+	"InstallScripts" : 
+	[
+		"/home/alan/Documents/Project_AK/build/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/_deps/sdl3-build/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Main/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Component/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Interfaces/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Layer/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Object/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/PollEvent/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Render/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Render/Shaders/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Engine/Utils/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Game/cmake_install.cmake",
+		"/home/alan/Documents/Project_AK/build/src/Game/Entity/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
