@@ -1,14 +1,14 @@
 // | -------------------------------
 #include "Render.hpp"
 // | -------------------------------
-#include "Engine/Utils/Color.hpp"
+#include "RColor.hpp"
+#include "RBatch.hpp"
+// | -------------------------------
 #include "Engine/Utils/Vector2.hpp"
-#include "Engine/Render/RBatch.hpp"
 #include "Engine/Utils/Log.hpp"
 // | -------------------------------
 #include <glad/glad.h>
 // | -------------------------------
-#include <SDL3/SDL_log.h>
 #include <SDL3/SDL_init.h>
 #include "SDL3/SDL_error.h"
 #include "SDL3/SDL_video.h"
@@ -78,7 +78,7 @@ namespace ENG
       LOG_FATAL(" | <<   Error creating glContext" );
       return false;
     }
-
+    SDL_GL_SetSwapInterval(1);
     return true;
   }
   

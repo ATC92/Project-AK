@@ -1,12 +1,12 @@
 // | -------------------------------
 #include "RImage.hpp"
-#include "Engine/Utils/Log.hpp"
 // | -------------------------------
-#include <cstdint>
 #include <glad/glad.h>
 // | -------------------------------
-#include <stb_image.h>
+#include "Engine/Utils/Log.hpp"
+#include "Engine/Extern/stb_image.h"
 // | -------------------------------
+#include <cstdint>
 #include <stdexcept>
 #include <string>
 // | -------------------------------

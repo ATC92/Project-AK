@@ -32,6 +32,16 @@ namespace ENG
         }
       }
 
+      float Length(const Vector2& v)
+      {
+        return std::sqrt(v.x*v.x + v.y*v.y);
+      }
+
+      Vector2 operator*(const Vector2& v1) const
+      {
+        return {this->x*v1.x,this->y*v1.y};
+      }
+
       Vector2 operator-(const Vector2& v1) const
       {
         return {x-v1.x , y-v1.y};

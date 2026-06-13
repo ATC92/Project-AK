@@ -1,56 +1,45 @@
 // | -------------------------------
 #pragma once
 // | -------------------------------
-#include "Game/Entity/Entity.hpp"
+#include "Engine/Component/ComponentStorage.hpp"
 #include "Engine/Render/RBatch.hpp"
 #include "Engine/Utils/Vector2.hpp"
 #include "Engine/Component/Component.hpp"
 // | -------------------------------
-#include <memory>
+#include <cstdint>
+#include <glm/detail/qualifier.hpp>
 #include <string>
 #include <type_traits>
-#include <vector>
 // | -------------------------------
 
 namespace ENG
 {
-  class Object : public APP::Entity
+  class Object
   {
     public:
       explicit Object(const std::string& _name);
-      ~Object() = default;
-      void Draw(Batcher& b) const override;
-      void Update(float dt) override;
+      virtual ~Object() = default;
+      virtual void Draw(Batcher& b) const;
+      virtual void Update(float dt);
 
-      Object& AddComponent(const std::shared_ptr<IComponents>& component);
+      template<typename T, typename... Args>
+      T& AddComponent(Args&&... args)
+      {
+        return components.Emplace<T>(std::forward<Args>(args)...);
+      }
 
-      template <typename T> Object& CopyComponent(const T *components)
+      template<typename T>
+      T* GetComponent() const
       {
-        auto c = std::make_shared<T>(*components);
-        _components.push_back(c);
-        return *this;
+        static_assert(std::is_base_of_v<IComponents, T>);
+        return components.Get<T>(); 
       }
-      template <typename T> T* GetComponent()const
+
+      template<typename T>
+      bool HasComponent() const 
       {
-        static_assert(std::is_base_of<IComponents, T>::value, "Only IComponents sons");
-        for(auto& c:_components)
-        {
-          T* comp = dynamic_cast<T*>(c.get());
-          if(comp)
-            return comp;
-        }
-        return nullptr;
-      }
-      template <typename T> bool HasComponent() const
-      {
-        static_assert(std::is_base_of<IComponents, T>::value, "Only IComponents sons");
-        for(auto& c:_components)
-        {
-          T* comp = dynamic_cast<T*>(c.get());
-          if(comp)
-              return true;
-        }
-        return false;
+        static_assert(std::is_base_of_v<IComponents, T>);
+        return components.Has<T>();
       }
 
       static int GetCountObj()
@@ -58,42 +47,45 @@ namespace ENG
         return countObject;
       }
 
-      std::shared_ptr<IName> GetName(void)
+      const std::string& GetName(void)
       {
         return this->name;
       }
    
-      std::shared_ptr<ITransform>& GetTransform(void)
+      ITransform& GetTransform(void)
       {
         return this->transform;
       }
 
-      std::shared_ptr<IStats>& GetStats(void)
+      IStats& GetStats(void)
       {
         return this->stats;
       }
 
       const bool IsAlive(void)
       {
-        return stats->hp < 0;
+        return stats.hp > 0;
       }
 
-      std::vector<std::shared_ptr<IComponents>>& GetListComponents(void)
+      const ComponentStorage& GetListComponents(void)
       {
-        return _components;
+        return components;
       }
       
       void SetPosition(float x, float y);
       void SetPosition(const Vector2& new_pos);
       const Vector2& GetPosition(void) const;
       Vector2 GetSize(void) const;
-
+      void SetLayer(uint8_t _layer) { layer = _layer;}
+      uint8_t GetLayer() const { return layer; }
     private:
+      uint8_t layer;
       static int countObject;
     protected:
-      std::shared_ptr<IName> name;
-      std::shared_ptr<ITransform> transform;
-      std::shared_ptr<IStats> stats;
-      std::vector<std::shared_ptr<IComponents>> _components;
+      ITransform transform;
+      IStats stats;
+      std::string name;
+
+      ComponentStorage components;
   };
 } // namespace ENG

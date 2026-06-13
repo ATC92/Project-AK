@@ -2,7 +2,8 @@
 #pragma once
 /// | ------------------------------------ |
 #include "Engine/Render/RImage.hpp"
-#include "Engine/Render/RRects.hpp"
+#include "Engine/Render/RColor.hpp"
+#include "Engine/Utils/Rects.hpp"
 #include "Engine/Utils/Vector2.hpp"
 /// | ------------------------------------ |
 #include <cstdint>
@@ -38,6 +39,7 @@ namespace ENG
         Vector2 position;
         Vector2 prev_position;
         Vector2 velocity;
+        Vector2 direction;
         float   angle;
     };
 
@@ -197,4 +199,17 @@ namespace ENG
     //     int frame_total_curva;
     //     int frame_actual_curva;
     // };
+
+  class IColor : public IComponents
+  {
+    public:
+      IColor(const Color& c);
+      IColor(float r, float g, float b, float a = 1.0f);
+
+      void SetOutColor(const Color& c);
+      void SetOutColor(float r, float g, float b, float a = 1.0f);
+    private:
+      Color color;
+      Color outColor;
+  };
 }

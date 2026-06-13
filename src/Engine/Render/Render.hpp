@@ -1,12 +1,12 @@
 // | -------------------------------
 #pragma once
 // | -------------------------------
-#include "Engine/Render/RBatch.hpp"
-#include "Engine/Utils/Color.hpp"
+#include "RBatch.hpp"
+#include "RColor.hpp"
+// | -------------------------------
 #include "Engine/Utils/Vector2.hpp"
 // | -------------------------------
 #include "SDL3/SDL_video.h"
-#include <SDL3/SDL_render.h>
 // | -------------------------------
 #include <X11/X.h>
 #include <string>

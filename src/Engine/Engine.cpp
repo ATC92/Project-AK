@@ -1,17 +1,18 @@
 // | -------------------------------
 #include "Engine.hpp"
 // | -------------------------------
-#include "Engine/Render/RAssetsManager.hpp"
-#include "Engine/Services/Services.hpp"
-#include "Engine/Utils/Color.hpp"
+#include "Engine/Utils/Log.hpp"
+#include "Engine/Render/RColor.hpp"
 #include "Engine/Utils/Config.hpp"
 #include "Engine/Render/Render.hpp"
 #include "Engine/Layer/GameLayer.hpp"
+#include "Engine/Services/Services.hpp"
 #include "Engine/PollEvent/PollEvent.hpp"
+#include "Engine/Services/AssetsManager.hpp"
 // | -------------------------------
-#include "Engine/Utils/Log.hpp"
 #include "SDL3/SDL_error.h"
 // | -------------------------------
+#include <algorithm>
 #include <chrono>
 #include <memory>
 #include <string>
@@ -22,6 +23,14 @@ namespace ENG
 {
   Engine::Engine(const EngineConfig& config, std::unique_ptr<GameLayer> layer)
     : eConfig(std::move(config)), game(std::move(layer)) {}
+
+  Engine::~Engine()
+  {
+    if(game)
+    {
+        game.reset();
+    }
+  }
 
   bool Engine::OnInit(void)
   {  
@@ -51,7 +60,6 @@ namespace ENG
 
     game->OnInit();
 
-
     return true;
   }
 
@@ -65,6 +73,12 @@ namespace ENG
     
     while (game->IsRunning())
     {
+      // Update DeltaTime
+      auto frame_act = std::chrono::high_resolution_clock::now();
+      dt = std::chrono::duration_cast<std::chrono::duration<float>>(frame_act-frame_ant).count();
+      frame_ant = frame_act;
+      dt = std::min(dt, 0.05f);
+      
       PollEvent::Get().ProcessPollEvents();
       game->OnInputs(dt);
       game->OnUpdate(dt);
@@ -82,26 +96,18 @@ namespace ENG
       // Clear Render
       r.ClearRender();
        
-
       PollEvent::Get().ResetPollEvent();
-      
-
-      // Update DeltaTime
-      auto frame_act = std::chrono::high_resolution_clock::now();
-      dt = std::chrono::duration_cast<std::chrono::duration<float>>(frame_act-frame_ant).count();
-      frame_ant = frame_act;
 
     }
-
     LOG_INFO(" | << Application next to close, waiting...");
-    PollEvent::Get().ClearPollEvent();
-    game->OnDestroy();
     return true;
   }
 
   void Engine::OnDestroy(void)
   {
     LOG_INFO(" | << Destroying Engine, waiting...");
+    game->OnDestroy();
+    game.reset();
     Render::Get().DestroyBatch();
     Render::Get().DestroyWindowSDLContext();
     PollEvent::Get().ClearPollEvent();

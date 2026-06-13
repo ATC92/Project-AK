@@ -1,10 +1,11 @@
 // | -------------------------------
 #pragma once
 // | -------------------------------
-#include "Engine/Utils/Vector2.hpp"
-#include <cstdint>
 #include <glad/glad.h>
 // | -------------------------------
+#include "Engine/Utils/Vector2.hpp"
+// | -------------------------------
+#include <cstdint>
 #include <string>
 // | -------------------------------
 

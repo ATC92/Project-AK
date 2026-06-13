@@ -1,7 +1,10 @@
+// | -------------------------------
 #pragma once
-
-#include <cstdint>
+// | -------------------------------
 #include <string>
+#include <cstdint>
+// | -------------------------------
+
 namespace ENG
 {
   enum class FLAGS 

@@ -1,5 +1,6 @@
 // | -------------------------------
-#include "Engine/Render/RAssetsManager.hpp"
+#include "AssetsManager.hpp"
+// | -------------------------------
 #include "Engine/Render/RImage.hpp"
 #include "Engine/Utils/Log.hpp"
 // | -------------------------------

@@ -1,9 +1,8 @@
 // | -------------------------------
 #pragma once
 // | -------------------------------
-#include "Engine/Render/RAssetsManager.hpp"
+#include "AssetsManager.hpp"
 // | -------------------------------
-
 
 namespace ENG
 {
@@ -12,10 +11,7 @@ namespace ENG
     public:
       static AssetsManager& Assets() {return *assets;}
       static void Provide(AssetsManager* a) { assets = a; }
-
     private:
       static inline AssetsManager* assets = nullptr;
-
   };
-
 }

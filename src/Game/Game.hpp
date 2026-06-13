@@ -1,11 +1,21 @@
+/// | ------------------------------------ |
 #pragma once
-
+/// | ------------------------------------ |
 #include "Engine/Layer/GameLayer.hpp"
-#include "Engine/Object/Object.hpp"
-#include "Engine/Utils/Color.hpp"
-#include "Game/Entity/Entity.hpp"
-#include <memory>
+#include "Engine/Object/ObjectPool.hpp"
+#include "Engine/Render/RColor.hpp"
+#include "Engine/Render/RenderEntry.hpp"
 #include <vector>
+/// | ------------------------------------ |
+#define PLAYER 1
+/// | ------------------------------------ |
+#define LAYER_BACKGROUND  0
+#define LAYER_WOLRD       10
+#define LAYER_PLAYER      20
+#define LAYER_FRONT       30
+#define LAYER_FX          40
+#define LAYER_UI          50
+/// | ------------------------------------ |
 
 namespace APP
 {
@@ -20,11 +30,11 @@ namespace APP
       bool IsRunning(void) override;
       void OnUpdate(float dt) override;
       void OnRender(float dt) override;
-    private:
-      std::vector<std::unique_ptr<Entity>> pool;
+
     private:
       bool IsAppEnd;
-      std::shared_ptr<ENG::Object> player;
+      ENG::ObjectPool pool;
+      std::vector<ENG::RenderEntry> renderQueue;
 
     protected:
       ENG::Color bgColor;

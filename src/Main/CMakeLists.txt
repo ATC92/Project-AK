@@ -1,5 +1,4 @@
 target_include_directories(Project_AK PRIVATE 
-  ${PROJECT_SOURCE_DIR}/external/stb 
   ${PROJECT_SOURCE_DIR}/external/glad/include
 )
 

@@ -51,9 +51,9 @@ build src/Engine/Component/all: phony src/Engine/Component/all$:Debug
 
 
 #############################################
-# Folder: /home/alan/Documents/Project_AK/build/src/Engine/Interfaces
+# Folder: /home/alan/Documents/Project_AK/build/src/Engine/Extern
 
-build src/Engine/Interfaces/all: phony src/Engine/Interfaces/all$:Debug
+build src/Engine/Extern/all: phony src/Engine/Extern/all$:Debug
 
 
 #############################################
@@ -87,6 +87,12 @@ build src/Engine/Render/Shaders/all: phony src/Engine/Render/Shaders/all$:Debug
 
 
 #############################################
+# Folder: /home/alan/Documents/Project_AK/build/src/Engine/Services
+
+build src/Engine/Services/all: phony src/Engine/Services/all$:Debug
+
+
+#############################################
 # Folder: /home/alan/Documents/Project_AK/build/src/Engine/Utils
 
 build src/Engine/Utils/all: phony src/Engine/Utils/all$:Debug
@@ -99,9 +105,9 @@ build src/Game/all: phony src/Game/all$:Debug
 
 
 #############################################
-# Folder: /home/alan/Documents/Project_AK/build/src/Game/Entity
+# Folder: /home/alan/Documents/Project_AK/build/src/Game/Systems
 
-build src/Game/Entity/all: phony src/Game/Entity/all$:Debug
+build src/Game/Systems/all: phony src/Game/Systems/all$:Debug
 
 
 #############################################

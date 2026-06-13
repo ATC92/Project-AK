@@ -48,7 +48,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Main/main.cpp.o: CXX_COMPILER__Proje
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Main/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Main
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -58,7 +58,7 @@ build CMakeFiles/Project_AK.dir/Release/external/glad/src/glad.c.o: C_COMPILER__
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/external/glad/src/glad.c.o.d
   FLAGS = -O3 -DNDEBUG
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/external/glad/src
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -68,7 +68,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Component/Component.cpp.o: CX
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Component/Component.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Component
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -78,7 +78,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Object/Object.cpp.o: CXX_COMP
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Object/Object.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Object
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -88,19 +88,9 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/PollEvent/PollEvent.cpp.o: CX
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/PollEvent/PollEvent.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/PollEvent
-  TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
-
-build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RAssetsManager.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Render/RAssetsManager.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
-  CONFIG = Release
-  DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
-  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RAssetsManager.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
-  OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
-  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
 
 build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RBatch.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Render/RBatch.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
@@ -108,7 +98,27 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RBatch.cpp.o: CXX_COMP
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RBatch.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
+  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
+  TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
+
+build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RColor.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Render/RColor.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
+  CONFIG = Release
+  DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
+  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RColor.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
+  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
+  TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
+
+build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RGeometry.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Render/RGeometry.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
+  CONFIG = Release
+  DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
+  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RGeometry.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -118,7 +128,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RImage.cpp.o: CXX_COMP
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RImage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -128,7 +138,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RShader.cpp.o: CXX_COM
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RShader.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -138,29 +148,19 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Render/Render.cpp.o: CXX_COMP
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Render/Render.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Render
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
 
-build CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Color.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Utils/Color.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
+build CMakeFiles/Project_AK.dir/Release/src/Engine/Services/AssetsManager.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Services/AssetsManager.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
   CONFIG = Release
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
-  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Color.cpp.o.d
+  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Services/AssetsManager.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
-  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Utils
-  TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
-
-build CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Geometry.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Utils/Geometry.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
-  CONFIG = Release
-  DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
-  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Geometry.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
-  OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
-  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Utils
+  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Services
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
 
 build CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Path.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Engine/Utils/Path.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
@@ -168,7 +168,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Path.cpp.o: CXX_COMPILE
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Path.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine/Utils
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -178,9 +178,19 @@ build CMakeFiles/Project_AK.dir/Release/src/Engine/Engine.cpp.o: CXX_COMPILER__P
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Engine/Engine.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Engine
+  TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
+
+build CMakeFiles/Project_AK.dir/Release/src/Game/Systems/Systems.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Game/Systems/Systems.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
+  CONFIG = Release
+  DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
+  DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Game/Systems/Systems.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++20
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
+  OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Game/Systems
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
 
 build CMakeFiles/Project_AK.dir/Release/src/Game/Game.cpp.o: CXX_COMPILER__Project_AK_unscanned_Release /home/alan/Documents/Project_AK/src/Game/Game.cpp || cmake_object_order_depends_target_Project_AK_RELEASE
@@ -188,7 +198,7 @@ build CMakeFiles/Project_AK.dir/Release/src/Game/Game.cpp.o: CXX_COMPILER__Proje
   DEFINES = -DASSET_PATH=\"/home/alan/Documents/Project_AK/assets/\" -DCONFIG_PATH=\"/home/alan/Documents/Project_AK/config/\" -DSHADER_PATH=\"/home/alan/Documents/Project_AK/shaders/\" -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/src/Game/Game.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++20
-  INCLUDES = -I/home/alan/Documents/Project_AK/external/stb -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
+  INCLUDES = -I/home/alan/Documents/Project_AK/external/glad/include -I/home/alan/Documents/Project_AK/src/. -I/home/alan/Documents/Project_AK/build/_deps/sdl3-build/include-revision -I/home/alan/Documents/Project_AK/build/_deps/sdl3-src/include
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/Project_AK.dir/Release/src/Game
   TARGET_SUPPORT_DIR = CMakeFiles/Project_AK.dir
@@ -201,12 +211,12 @@ build CMakeFiles/Project_AK.dir/Release/src/Game/Game.cpp.o: CXX_COMPILER__Proje
 #############################################
 # Link the executable Release/Project_AK
 
-build Release/Project_AK: CXX_EXECUTABLE_LINKER__Project_AK_Release CMakeFiles/Project_AK.dir/Release/src/Main/main.cpp.o CMakeFiles/Project_AK.dir/Release/external/glad/src/glad.c.o CMakeFiles/Project_AK.dir/Release/src/Engine/Component/Component.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Object/Object.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/PollEvent/PollEvent.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RAssetsManager.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RBatch.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RImage.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RShader.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/Render.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Color.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Geometry.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Path.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Engine.cpp.o CMakeFiles/Project_AK.dir/Release/src/Game/Game.cpp.o | _deps/sdl3-build/Release/libSDL3.so.0.4.4 _deps/sdl3-src/src/dynapi/SDL_dynapi.sym || _deps/sdl3-build/Release/libSDL3.so _deps/sdl3-build/Release/libSDL3.so
+build Release/Project_AK: CXX_EXECUTABLE_LINKER__Project_AK_Release CMakeFiles/Project_AK.dir/Release/src/Main/main.cpp.o CMakeFiles/Project_AK.dir/Release/external/glad/src/glad.c.o CMakeFiles/Project_AK.dir/Release/src/Engine/Component/Component.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Object/Object.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/PollEvent/PollEvent.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RBatch.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RColor.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RGeometry.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RImage.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/RShader.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Render/Render.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Services/AssetsManager.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Utils/Path.cpp.o CMakeFiles/Project_AK.dir/Release/src/Engine/Engine.cpp.o CMakeFiles/Project_AK.dir/Release/src/Game/Systems/Systems.cpp.o CMakeFiles/Project_AK.dir/Release/src/Game/Game.cpp.o | _deps/sdl3-build/Release/libSDL3.so.0.4.4 _deps/sdl3-src/src/dynapi/SDL_dynapi.sym || _deps/sdl3-build/Release/libSDL3.so _deps/sdl3-build/Release/libSDL3.so
   CONFIG = Release
   DEP_FILE = CMakeFiles/Project_AK.dir/Release/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/Project_AK.dir/Release/link.d
-  LINK_LIBRARIES = -Wl,-rpath,/home/alan/Documents/Project_AK/build/_deps/sdl3-build/Release  _deps/sdl3-build/Release/libSDL3.so.0.4.4  -lgcc_s_asneeded  -lgcc_s_asneeded
+  LINK_LIBRARIES = -Wl,-rpath,/home/alan/Documents/Project_AK/build/_deps/sdl3-build/Release  _deps/sdl3-build/Release/libSDL3.so.0.4.4
   OBJECT_DIR = CMakeFiles/Project_AK.dir/Release
   POST_BUILD = :
   PRE_LINK = :
@@ -4142,6 +4152,11 @@ build _deps/sdl3-build/wayland-generated-protocols/xdg-toplevel-icon-v1-client-p
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
+# /home/alan/Documents/Project_AK/src/Engine/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
 # /home/alan/Documents/Project_AK/src/CMakeLists.txt
 # =============================================================================
 
@@ -4186,7 +4201,7 @@ build src/all$:Release: phony src/Main/all$:Release src/Engine/all$:Release src/
 #############################################
 # Folder: /home/alan/Documents/Project_AK/build/src/Engine
 
-build src/Engine/all$:Release: phony src/Engine/Component/all$:Release src/Engine/Interfaces/all$:Release src/Engine/Layer/all$:Release src/Engine/Object/all$:Release src/Engine/PollEvent/all$:Release src/Engine/Render/all$:Release src/Engine/Utils/all$:Release
+build src/Engine/all$:Release: phony src/Engine/Component/all$:Release src/Engine/Extern/all$:Release src/Engine/Layer/all$:Release src/Engine/Object/all$:Release src/Engine/PollEvent/all$:Release src/Engine/Render/all$:Release src/Engine/Services/all$:Release src/Engine/Utils/all$:Release
 
 
 #############################################
@@ -4196,9 +4211,9 @@ build src/Engine/Component/all$:Release: phony
 
 
 #############################################
-# Folder: /home/alan/Documents/Project_AK/build/src/Engine/Interfaces
+# Folder: /home/alan/Documents/Project_AK/build/src/Engine/Extern
 
-build src/Engine/Interfaces/all$:Release: phony
+build src/Engine/Extern/all$:Release: phony
 
 
 #############################################
@@ -4232,6 +4247,12 @@ build src/Engine/Render/Shaders/all$:Release: phony
 
 
 #############################################
+# Folder: /home/alan/Documents/Project_AK/build/src/Engine/Services
+
+build src/Engine/Services/all$:Release: phony
+
+
+#############################################
 # Folder: /home/alan/Documents/Project_AK/build/src/Engine/Utils
 
 build src/Engine/Utils/all$:Release: phony
@@ -4240,13 +4261,13 @@ build src/Engine/Utils/all$:Release: phony
 #############################################
 # Folder: /home/alan/Documents/Project_AK/build/src/Game
 
-build src/Game/all$:Release: phony src/Game/Entity/all$:Release
+build src/Game/all$:Release: phony src/Game/Systems/all$:Release
 
 
 #############################################
-# Folder: /home/alan/Documents/Project_AK/build/src/Game/Entity
+# Folder: /home/alan/Documents/Project_AK/build/src/Game/Systems
 
-build src/Game/Entity/all$:Release: phony
+build src/Game/Systems/all$:Release: phony
 
 
 #############################################

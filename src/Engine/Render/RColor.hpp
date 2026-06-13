@@ -1,6 +1,9 @@
+/// | ------------------------------------ |
 #pragma once
-
+/// | ------------------------------------ |
 #include <cstdint>
+/// | ------------------------------------ |
+
 namespace ENG
 {
   class Color
@@ -13,6 +16,14 @@ namespace ENG
         : r(r), g(g), b(b), a(a) {};
 
       void From255(uint8_t _r, uint8_t _g, uint8_t _b, uint8_t _a = 255);
+
+      bool operator==(const Color& c) const
+      {
+        return (this->r == c.r &&
+            this->g == c.g &&
+            this->b == c.b && 
+            this->a == c.a);
+      }
     public:
       float r;
       float g;

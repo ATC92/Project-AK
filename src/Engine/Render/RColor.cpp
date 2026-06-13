@@ -1,6 +1,9 @@
-#include "Color.hpp"
+/// | ------------------------------------ |
+#include "RColor.hpp"
+/// | ------------------------------------ |
 #include <algorithm>
 #include <cstdint>
+/// | ------------------------------------ |
 
 namespace ENG 
 { 

@@ -14,8 +14,8 @@
 /home/alan/Documents/Project_AK/build/src/Engine/CMakeFiles/rebuild_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Component/CMakeFiles/edit_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Component/CMakeFiles/rebuild_cache.dir
-/home/alan/Documents/Project_AK/build/src/Engine/Interfaces/CMakeFiles/edit_cache.dir
-/home/alan/Documents/Project_AK/build/src/Engine/Interfaces/CMakeFiles/rebuild_cache.dir
+/home/alan/Documents/Project_AK/build/src/Engine/Extern/CMakeFiles/edit_cache.dir
+/home/alan/Documents/Project_AK/build/src/Engine/Extern/CMakeFiles/rebuild_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Layer/CMakeFiles/edit_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Layer/CMakeFiles/rebuild_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Object/CMakeFiles/edit_cache.dir
@@ -26,9 +26,11 @@
 /home/alan/Documents/Project_AK/build/src/Engine/Render/CMakeFiles/rebuild_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Render/Shaders/CMakeFiles/edit_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Render/Shaders/CMakeFiles/rebuild_cache.dir
+/home/alan/Documents/Project_AK/build/src/Engine/Services/CMakeFiles/edit_cache.dir
+/home/alan/Documents/Project_AK/build/src/Engine/Services/CMakeFiles/rebuild_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Utils/CMakeFiles/edit_cache.dir
 /home/alan/Documents/Project_AK/build/src/Engine/Utils/CMakeFiles/rebuild_cache.dir
 /home/alan/Documents/Project_AK/build/src/Game/CMakeFiles/edit_cache.dir
 /home/alan/Documents/Project_AK/build/src/Game/CMakeFiles/rebuild_cache.dir
-/home/alan/Documents/Project_AK/build/src/Game/Entity/CMakeFiles/edit_cache.dir
-/home/alan/Documents/Project_AK/build/src/Game/Entity/CMakeFiles/rebuild_cache.dir
+/home/alan/Documents/Project_AK/build/src/Game/Systems/CMakeFiles/edit_cache.dir
+/home/alan/Documents/Project_AK/build/src/Game/Systems/CMakeFiles/rebuild_cache.dir

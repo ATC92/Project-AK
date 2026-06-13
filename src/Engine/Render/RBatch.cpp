@@ -1,15 +1,15 @@
 /// | ------------------------------------ |
 #include "RBatch.hpp"
 /// | ------------------------------------ |
-#include "Engine/Render/RImage.hpp"
-#include "Engine/Render/RVertex.hpp"
-#include "Engine/Render/RShader.hpp"
-#include "Engine/Render/Render.hpp"
-#include "Engine/Utils/Geometry.hpp"
+#include "RImage.hpp"
+#include "RVertex.hpp"
+#include "RShader.hpp"
+#include "Render.hpp"
+#include "RGeometry.hpp"
+/// | ------------------------------------ |
 #include "Engine/Utils/Path.hpp"
 #include "Engine/Utils/Vector2.hpp"
 /// | ------------------------------------ |
-//#include <cstdio>
 #include <glm/detail/qualifier.hpp>
 #include <glm/ext/matrix_clip_space.hpp>
 #include <glm/ext/matrix_float4x4.hpp>
@@ -23,6 +23,7 @@
 #include <cstdint>
 #include <cmath>
 #include <memory>
+#include <vector>
 /// | ------------------------------------ |
 
 namespace ENG
@@ -31,6 +32,7 @@ namespace ENG
   {
     /// Starting buffer on CPU
     m_VertexBufferBase = new Vertex[MAX_VERTS];
+    m_IndexBufferBase  = new uint32_t[MAX_INDICES];
 
     // EBO
     glGenBuffers(1, &m_EBO);
@@ -63,22 +65,7 @@ namespace ENG
     glEnableVertexAttribArray(3);
     glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexIndex));
 
-    /// EBO -> Static index (QUAD always same patron)
-    uint32_t* index = new uint32_t[MAX_INDICES];
-    uint32_t offset = 0;
-    for (uint32_t i=0; i<MAX_INDICES; i+=6)
-    {
-      index[i + 0] = offset + 0;
-      index[i + 1] = offset + 1;
-      index[i + 2] = offset + 2;
-      index[i + 3] = offset + 2;
-      index[i + 4] = offset + 3;
-      index[i + 5] = offset + 0;
-      offset += 4;
-    }
-
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, MAX_INDICES * sizeof(uint32_t), index, GL_STATIC_DRAW);
-    delete [] index;
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, MAX_INDICES * sizeof(uint32_t),nullptr, GL_DYNAMIC_DRAW);
 
     glBindVertexArray(0);
 
@@ -121,13 +108,13 @@ namespace ENG
     glDeleteBuffers(1, &m_EBO);
     glDeleteTextures(1, &m_WhiteTexture);
     glDeleteProgram(this->shader.GetProgram());
-    delete[] m_VertexBufferBase;
+    delete [] m_VertexBufferBase;
+    delete [] m_IndexBufferBase;
   }
 
   void Batcher::Begin()
   {
     Vector2 wS = Render::Get().GetScreenSize();
-    //printf("ScreenSize: %.1f %.1f\n", wS.x, wS.y);
     glm::mat4 proj = glm::ortho(0.0f, wS.x,wS.y,0.0f, -1.0f, 1.0f);
     glUniformMatrix4fv(
       glGetUniformLocation(shader.GetProgram(), "u_ViewProjection"),
@@ -145,13 +132,16 @@ namespace ENG
   void Batcher::StartBatch()
   {
     m_VertexBufferPtr = m_VertexBufferBase;
+    m_IndexBufferPtr  = m_IndexBufferBase;
     m_IndexCount = 0;
+    m_VertexCount = 0;
     m_TextureSlotIndex = 1;
   }
 
   void Batcher::Flush()
   {
-    //glDisable(GL_BLEND);
+
+
     glDisable(GL_CULL_FACE);
     glDisable(GL_DEPTH_TEST);
 
@@ -159,10 +149,12 @@ namespace ENG
 
     // Push vertex to VRam
     uint32_t dataSize = (uint32_t)((uint8_t*)m_VertexBufferPtr - (uint8_t*)m_VertexBufferBase);
-
     glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
     glBufferSubData(GL_ARRAY_BUFFER, 0, dataSize, m_VertexBufferBase);
-    //printf("After bufferSubData: %d\n", glGetError());
+    
+    uint32_t indexSize = (uint32_t)((uint8_t*)m_IndexBufferPtr - (uint8_t*)m_IndexBufferBase);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
+    glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, 0, indexSize, m_IndexBufferBase);
 
     for( uint32_t i=0; i<m_TextureSlotIndex; i++)
     // Bind textures on slots
@@ -170,15 +162,10 @@ namespace ENG
       glActiveTexture(GL_TEXTURE0 + i);
       glBindTexture(GL_TEXTURE_2D, m_TextureSlots[i]);
     }
-    //printf("After textures: %d\n", glGetError());
-    //printf("IndexCount: %d | DataSize: %d | TexSlots: %d\n", m_IndexCount, dataSize, m_TextureSlotIndex);
-    
     glUseProgram(shader.GetProgram());
     glBindVertexArray(m_VAO);
-    //printf("After VAO: %d\n", glGetError());
     glDrawElements(GL_TRIANGLES, m_IndexCount, GL_UNSIGNED_INT, nullptr);
     glBindVertexArray(0);
-    //printf("After draw: %d\n", glGetError());
 
     StartBatch();  /// Reset
   }
@@ -210,6 +197,7 @@ namespace ENG
       StartBatch();
     }
 
+    uint32_t base = m_VertexCount;
 
     // Bottom-left
     m_VertexBufferPtr->Position  = {pos.x, pos.y, 0.0f};
@@ -239,6 +227,14 @@ namespace ENG
     m_VertexBufferPtr->TexIndex  = 0.0f;
     m_VertexBufferPtr++;
 
+    *m_IndexBufferPtr++ = base + 0;
+    *m_IndexBufferPtr++ = base + 1;
+    *m_IndexBufferPtr++ = base + 2;
+    *m_IndexBufferPtr++ = base + 2;
+    *m_IndexBufferPtr++ = base + 3;
+    *m_IndexBufferPtr++ = base + 0;
+
+    m_VertexCount += 4;
     m_IndexCount += 6;
   }
 
@@ -253,6 +249,8 @@ namespace ENG
     const RImage* tex = texture.get();
     float textureIndex = GetTextureIndex(*tex);
 
+    uint32_t base = m_VertexCount;
+
     // Bottom-left
     m_VertexBufferPtr->Position  = {pos.x, pos.y, 0.0f};
     m_VertexBufferPtr->Color     = tint;
@@ -281,7 +279,15 @@ namespace ENG
     m_VertexBufferPtr->TexIndex  = textureIndex;
     m_VertexBufferPtr++;
 
-    m_IndexCount += 6;
+    *m_IndexBufferPtr++ = base + 0;
+    *m_IndexBufferPtr++ = base + 1;
+    *m_IndexBufferPtr++ = base + 2;
+    *m_IndexBufferPtr++ = base + 2;
+    *m_IndexBufferPtr++ = base + 3;
+    *m_IndexBufferPtr++ = base + 0;
+    
+    m_VertexCount += 4;
+    m_IndexCount  += 6;
   }
 
   void Batcher::DrawCircle(const glm::vec2& center, float radius, const glm::vec4& color, uint32_t segments)
@@ -294,6 +300,7 @@ namespace ENG
 
     float angleIncrement = 2.0f * glm::pi<float>() / static_cast<float>(segments);
     float textureIndex = 0.0f; // White Texture
+    uint32_t base = m_VertexCount;
 
     for (uint32_t i = 0; i < segments; ++i)
     {
@@ -323,7 +330,12 @@ namespace ENG
       m_VertexBufferPtr->TexCord  = {0.5f + 0.5f * std::cos(angle2), 0.5f + 0.5f * std::sin(angle2)};
       m_VertexBufferPtr->TexIndex = textureIndex;
       m_VertexBufferPtr++;
+      
+      *m_IndexBufferPtr++ = base + 0;
+      *m_IndexBufferPtr++ = base + 1;
+      *m_IndexBufferPtr++ = base + 2;
 
+      m_VertexCount += 3;
       m_IndexCount += 3; // Each segment adds one triangle
 
       if (m_IndexCount >= MAX_INDICES)
@@ -334,11 +346,10 @@ namespace ENG
     }
   }
 
-  void Batcher::DrawCircleOutLine(const glm::vec2& center, float radius, const glm::vec4& outcolor)
+  void Batcher::DrawCircleOutLine(const glm::vec2& center, float radius, const glm::vec4& outcolor, float thickness)
   {
     uint32_t segments = 32;
     float angleIncrement = 2.0f * glm::pi<float>() / static_cast<float>(segments);
-    float thickness = 2.0f; // Default thickness for outline
 
     for (uint32_t i = 0; i < segments; ++i)
     {
@@ -361,6 +372,7 @@ namespace ENG
     }
 
     float textureIndex = 0.0f; // White Texture
+    uint32_t base = m_VertexCount;
 
     // Point A
     m_VertexBufferPtr->Position  = {pointA.x, pointA.y, 0.0f};
@@ -383,7 +395,12 @@ namespace ENG
     m_VertexBufferPtr->TexIndex  = textureIndex;
     m_VertexBufferPtr++;
 
-    m_IndexCount += 3;
+    *m_IndexBufferPtr++ = base + 0;
+    *m_IndexBufferPtr++ = base + 1;
+    *m_IndexBufferPtr++ = base + 2;
+
+    m_VertexCount += 3;
+    m_IndexCount  += 3;  
   }
 
   void Batcher::DrawLine(const glm::vec2& a, const glm::vec2& b, float thickness, const glm::vec4& color)
@@ -409,6 +426,7 @@ namespace ENG
     glm::vec2 p4 = a + normal;
 
     float textureIndex = 0.0f; // White Texture
+    uint32_t base = m_VertexCount; 
 
     // Bottom-left (p1)
     m_VertexBufferPtr->Position  = {p1.x, p1.y, 0.0f};
@@ -438,7 +456,43 @@ namespace ENG
     m_VertexBufferPtr->TexIndex  = textureIndex;
     m_VertexBufferPtr++;
 
+    *m_IndexBufferPtr++ = base + 0;
+    *m_IndexBufferPtr++ = base + 1;
+    *m_IndexBufferPtr++ = base + 2;
+    *m_IndexBufferPtr++ = base + 2;
+    *m_IndexBufferPtr++ = base + 3;
+    *m_IndexBufferPtr++ = base + 0;
+
+    m_VertexCount += 4;
     m_IndexCount += 6;
   }
+  
+  void Batcher::DrawPolygon(const std::vector<glm::vec2>& points, const glm::vec4& color)
+  {
+    if(points.size() < 3) return;
+    
+    uint32_t base = m_VertexCount;
+
+    // Subir todos los vértices
+    for(const auto& p : points)
+    {
+        m_VertexBufferPtr->Position = {p.x, p.y, 0.0f};
+        m_VertexBufferPtr->Color    = color;
+        m_VertexBufferPtr->TexCord  = {0.0f, 0.0f};
+        m_VertexBufferPtr->TexIndex = 0.0f;
+        m_VertexBufferPtr++;
+        m_VertexCount++;
+    }
+
+    // Triangle Fan
+    for(uint32_t i = 1; i < points.size() - 1; i++)
+    {
+        *m_IndexBufferPtr++ = base;
+        *m_IndexBufferPtr++ = base + i;
+        *m_IndexBufferPtr++ = base + i + 1;
+        m_IndexCount += 3;
+    }
+  }
+
 }
 

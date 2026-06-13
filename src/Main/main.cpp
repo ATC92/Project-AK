@@ -1,5 +1,6 @@
 // | -------------------------------
 #include "Game/Game.hpp"
+// | -------------------------------
 #include "Engine/Engine.hpp"
 #include "Engine/Utils/Config.hpp"
 // | -------------------------------
@@ -9,7 +10,11 @@
 // | -------------------------------
 // STB Implementation 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include "Engine/Extern/stb_image.h"
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "Engine/Extern/stb_image_write.h"
+#define STB_TRUETYPE_IMPLEMENTATION
+#include "Engine/Extern/stb_truetype.h"
 // | -------------------------------
 
 int main(void)
@@ -28,6 +33,8 @@ int main(void)
   engine->OnRun();
 
   engine->OnDestroy();
+
+  engine.reset();
 
   SDL_LogInfo(SDL_LOG_CATEGORY_SYSTEM, " | Engine Out, cya.");
   return 0;

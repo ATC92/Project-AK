@@ -11,6 +11,7 @@ namespace ENG
   {
     public:
       Engine(const EngineConfig& eConfig, std::unique_ptr<GameLayer> layer);
+      ~Engine();
 
       bool OnInit(void);
       bool OnRun(void);
